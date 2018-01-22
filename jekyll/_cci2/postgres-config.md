@@ -36,14 +36,14 @@ jobs:
     docker:
       - image: ruby:2.3.1
         environment:
-        - PG_HOST=localhost
-        - PG_USER=ubuntu
-        - RAILS_ENV=test
-        - RACK_ENV=test
+          PG_HOST: localhost
+          PG_USER: ubuntu
+          RAILS_ENV: test
+          RACK_ENV: test
       - image: postgres:9.5
         environment:
-        - POSTGRES_USER=ubuntu
-        - POSTGRES_DB=db_name
+          POSTGRES_USER: ubuntu
+          POSTGRES_DB: db_name
     steps:
       - checkout
       - run:
